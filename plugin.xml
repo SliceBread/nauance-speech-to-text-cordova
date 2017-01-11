@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-nauancestt" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Nauance Speech To Text</name>
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <asset src="www/nauancestt.js" target="js/nauancestt.js"/>
+
+    <js-module name="nauancestt" src="www/nauancestt.js">
+        <clobbers target="NauanceSTT" />
+    </js-module>
+
+
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription"> 
+                <string>My App would like to access your microphone.</string> 
+        </config-file>
+
+        <config-file parent="/*" target="config.xml">
+            <feature name="nauancestt">
+                <param name="ios-package" value="nauancestt" />
+            </feature>
+        </config-file> 
+        <header-file src="src/ios/nauancestt.h" target-dir="nauancestt"/>
+        <source-file src="src/ios/nauancestt.m" target-dir="nauancestt"/> 
+        <framework src="libs/ios/SpeechKit.framework" custom="true" weak="true" /> 
+    </platform>
+</plugin>
