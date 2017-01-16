@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-nauancestt" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>Nauance Speech To Text</name>
-    <engines>
-        <engine name="cordova" version=">=3.4.0"/>
-    </engines>
+    <!--<engines>
+        <engine name="cordova" version="<=6.0.0"/>
+    </engines>-->
 
     <asset src="www/nauancestt.js" target="js/nauancestt.js"/>
 

@@ -4,19 +4,6 @@
 #import "nauancestt.h"
 
 
-@interface nauancestt ()
-
-@property BOOL requestInProgress;
-@property BOOL resultInProgress; 
-
-@property(nonatomic, strong) CDVInvokedUrlCommand *finalTranscriptionCallback;
-@property(nonatomic, strong) CDVInvokedUrlCommand *listeningStatusCallback;
-@property(nonatomic, strong) CDVInvokedUrlCommand *voiceLevelCallback;
-@property(nonatomic, strong) SKSession *api;
-@property(nonatomic, strong) SKTransaction* transaction;
-  
-@end
-
 @implementation nauancestt
 
 - (void)initialize : (CDVInvokedUrlCommand*)command
@@ -25,7 +12,6 @@
     //Server Credentials
     NSString *SKServerUrl = arguments[@"serverUrl"]; 
     NSString *SKSAppKey = arguments[@"appKey"]; 
-    
     self.api = [[SKSession alloc] initWithURL:[NSURL URLWithString:SKServerUrl] appToken:SKSAppKey];
 }
 
