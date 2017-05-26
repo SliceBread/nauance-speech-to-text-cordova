@@ -29,7 +29,7 @@
     { 
         return;
     }
-    self.transaction = [_api recognizeWithType:SKTransactionSpeechTypeDictation detection:SKTransactionEndOfSpeechDetectionNone language:@"eng-USA" delegate:(id)self];
+    self.transaction = [_api recognizeWithType:SKTransactionSpeechTypeDictation detection:SKTransactionEndOfSpeechDetectionShort language:@"eng-USA" delegate:(id)self];
     self.finalTranscriptionCallback = command;
 }
 
